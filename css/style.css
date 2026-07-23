@@ -721,3 +721,138 @@ footer{
     display: block;
     border-radius: 12px;
 }
+
+/* =========================
+   POSTER SAFETY MOMENT
+========================= */
+
+.poster-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.poster-section h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #003366;
+}
+
+.poster-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.poster-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.poster-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.poster-card img {
+    width: 100%;
+    height: 450px;          /* Tinggi seragam */
+    object-fit: contain;    /* Gambar tidak terpotong */
+    display: block;
+    border-radius: 8px;
+    background: #fff;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+    .poster-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .poster-card img {
+        height: 400px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+    .poster-container {
+        grid-template-columns: 1fr;
+    }
+
+    .poster-card img {
+        height: auto;
+        max-height: 500px;
+    }
+
+    .poster-section h3 {
+        font-size: 24px;
+    }
+}
+
+.contact-card a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.contact-card a:hover {
+    color: #004999;
+    text-decoration: underline;
+}
+
+/* Layout Kontak */
+.contact-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Logo Samping */
+.side-logo {
+    flex: 0 0 180px;
+    text-align: center;
+}
+
+.side-logo img {
+    width: 180px;
+    max-width: 100%;
+    opacity: 0.9;
+    transition: transform 0.3s ease;
+}
+
+.side-logo img:hover {
+    transform: scale(1.05);
+}
+
+/* Kontainer Kontak */
+.contact-container {
+    flex: 1;
+    max-width: 1000px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .side-logo img {
+        width: 120px;
+    }
+}
